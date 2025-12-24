@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Afrikive - Reach Out to Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons CDN for the menu -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome CDN for other icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter (kept as a robust fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="./favicon.png" rel="apple-touch-icon">
+
+    <!-- Custom Fonts: Add your @font-face rules here -->
+    <style>
+        /*
+        @font-face {
+            font-family: 'Andika';
+            src: url('path/to/your/Andika-Regular.woff2') format('woff2'),
+                 url('path/to/your/Andika-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Black Mango Regular';
+            src: url('path/to/your/BlackMangoRegular.woff2') format('woff2'),
+                 url('path/to/your/BlackMangoRegular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        */
+
+        /* Global Monochrome Color Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-light-grey: #F0F0F0;
+            /* For subtle background variations */
+            --color-medium-grey: #6B7280;
+            /* For secondary text, subtle borders */
+            --color-dark-grey: #333333;
+            /* For main text, strong elements, footer */
+            --color-black: #000000;
+            /* For very strong contrasts if needed */
+
+            /* Page-Specific Accent Colors for Header Hover Effects */
+            --color-accent-home: #764b09;
+            /* Green (default, can be adjusted for Home page's specific theme) */
+            --color-accent-about: grey;
+            /* Blue for About page hover */
+            --color-accent-contribute: #1F5A3F;
+            /* Deeper Green from Forest theme */
+            --color-accent-contact: #CD611E;
+            /* Warm Orange-Brown for Contact page */
+
+            /* Contact Page's internal orange-brown hints */
+            --color-page-accent-orange-brown: #CD611E;
+            /* A vibrant orange-brown for hints/accents within the Contact page */
+            --color-page-soft-orange-brown: #D2B48C;
+            /* A softer orange-brown for secondary accents/hovers within the Contact page */
+        }
+
+        body {
+            font-family: 'Andika', 'Inter', sans-serif;
+            /* Andika as primary, Inter as fallback, then generic sans-serif */
+            background-color: var(--color-white);
+            /* Mostly white background */
+            color: var(--color-dark-grey);
+            /* Main text color */
+        }
+
+        /* Apply Black Mango Regular to headings for branding */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Black Mango Regular', 'Andika', sans-serif;
+            color: var(--color-dark-grey);
+            /* Dark grey for headings */
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header Section - Made transparent and fixed position -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+
+            <!-- Left side: Logo and Site Name -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder: Replace src with your logo URL -->
+                <img src="assets/logos/contact logo.png"
+                    onerror="this.onerror=null; this.src='https://placehold.co/40x40/E0F2F7/2C5282?text=CL'"
+                    alt="Afrikive Logo" class="w-10 h-10 rounded-full object-cover border-0 border-white">
+                <a href="#" class="text-2xl font-bold text-white">Afrikive</a>
+            </div>
+
+            <!-- Right side: Main Navigation and Hamburger Menu -->
+            <div class="flex items-center space-x-3">
+                <!-- Main Navigation - Hidden on mobile, visible on medium screens and up -->
+                <nav id="mobile-menu" class="hidden md:block">
+                    <ul
+                        class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto p-4 md:p-0 bg-white/50 md:bg-transparent text-left md:text-center shadow-lg md:shadow-none backdrop-blur-sm rounded-lg">
+                        <li><a href="index.html"
+                                class="block text-black md:text-white hover:text-[var(--color-accent-home)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">Home</a>
+                        </li>
+                        <li><a href="About.html"
+                                class="block text-black md:text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">About</a>
+                        </li>
+                        <li><a href="Contribute.html"
+                                class="block text-black md:text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">Contribute</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="block text-black md:text-white text-[var(--color-accent-contact)] transition-colors duration-200 font-bold py-2 px-4 md:px-0">Contact</a>
+                        </li> <!-- Active link for Contact -->
+                    </ul>
+                </nav>
+
+                <!-- Hamburger menu button for small screens -->
+                <button id="hamburger-button"
+                    class="md:hidden p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <!-- Material Icon for Hamburger -->
+                    <i id="hamburger-icon" class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Page Title Section (Hero-style section) -->
+        <section
+            class="relative w-full px-4 mb-16 overflow-hidden bg-cover bg-center min-h-screen flex items-center justify-center"
+            style="background-image: url('assets/images/ahmed-galal-ui9IbdPJJiY-unsplash.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-br from-black/50 to-transparent opacity-70"></div>
+            <!-- Dark overlay for text readability -->
+            <div id="contact-hero-text-content"
+                class="relative z-10 text-center max-w-4xl mx-auto text-white opacity-0 transition-opacity duration-1000 ease-in pt-20">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white">
+                    Get in Touch.
+                </h1>
+                <p class="text-xl md:text-2xl font-light opacity-90 mt-4 pb-6">
+                    We'd love to hear from you. Reach out with your questions, feedback, or collaboration ideas.
+                </p>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 md:px-5 lg:px-5 py-16"> <!-- Container for the rest of the content -->
+
+            <!-- Contact Form Section -->
+            <section
+                class="bg-white p-10 rounded-xl shadow-lg mb-12 border-t-4 border-[var(--color-page-accent-orange-brown)]">
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Send Us a Message</h2>
+                <form id="contactForm" class="max-w-2xl mx-auto space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-[var(--color-dark-grey)] mb-2">Your
+                            Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-page-soft-orange-brown)] focus:border-transparent transition-all duration-200"
+                            placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-[var(--color-dark-grey)] mb-2">Your
+                            Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-page-soft-orange-brown)] focus:border-transparent transition-all duration-200"
+                            placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="subject"
+                            class="block text-lg font-medium text-[var(--color-dark-grey)] mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-page-soft-orange-brown)] focus:border-transparent transition-all duration-200"
+                            placeholder="Inquiry about...">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-[var(--color-dark-grey)] mb-2">Your
+                            Message</label>
+                        <textarea id="message" name="message" rows="6"
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-page-soft-orange-brown)] focus:border-transparent transition-all duration-200"
+                            placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="inline-block bg-[var(--color-page-accent-orange-brown)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-page-soft-orange-brown)] transition-colors duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                    <!-- Message box for success or error feedback -->
+                    <div id="messageBox" class="mt-4 p-4 text-center rounded-lg hidden"></div>
+                </form>
+            </section>
+
+            <!-- Other Contact Information Section -->
+            <section class="bg-white p-10 rounded-xl shadow-lg border-t-4 border-[var(--color-page-soft-orange-brown)]">
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Other Ways to Connect</h2>
+                <div
+                    class="text-lg text-[var(--color-medium-grey)] leading-relaxed text-center max-w-4xl mx-auto space-y-4">
+                    <p>
+                        For general inquiries, you can also reach us directly via email:
+                        <a href="mailto:contact@afrikive.org"
+                            class="text-[var(--color-page-accent-orange-brown)] hover:underline font-semibold">contact@afrikive.org</a>
+                    </p>
+                    <p>
+                        Follow us on social media for updates and more stories:
+                    </p>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <a href="https://www.instagram.com/Afrik.ive" target="_blank"
+                            class="text-[var(--color-page-accent-orange-brown)] hover:text-[var(--color-page-soft-orange-brown)] transition-colors duration-200 text-3xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/afrikive/"
+                            class="text-[var(--color-page-accent-orange-brown)] hover:text-[var(--color-page-soft-orange-brown)] transition-colors duration-200 text-3xl">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- End of container for the rest of the content -->
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+        class="bg-white text-[var(--color-dark-grey)] py-8 mt-12 border-t border-[var(--color-page-accent-orange-brown)]">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Afrikive. All rights reserved.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-orange-brown)] transition-colors duration-200">Instagram</a>
+                <a href="https://www.pinterest.com/afrikive/"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-orange-brown)] transition-colors duration-200">Pinterest</a>
+                <span class="text-[var(--color-dark-grey)]">For further inquiries, contact:</span>
+                <a href="mailto:contact@afrikive.org"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-orange-brown)] transition-colors duration-200">contact@afrikive.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to make the hero text fade in on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroText = document.getElementById('contact-hero-text-content');
+            if (heroText) {
+                // Remove opacity-0 after a short delay to allow CSS transition to work
+                setTimeout(() => {
+                    heroText.classList.remove('opacity-0');
+                }, 100); // Small delay to ensure CSS is applied before removal
+            }
+
+            // JavaScript for the hamburger menu
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+
+            hamburgerButton.addEventListener('click', () => {
+                // Toggle the 'hidden' class on the menu for show/hide behavior
+                mobileMenu.classList.toggle('hidden');
+
+                // Toggle the icon between 'menu' and 'close'
+                if (mobileMenu.classList.contains('hidden')) {
+                    hamburgerIcon.innerHTML = 'menu';
+                } else {
+                    hamburgerIcon.innerHTML = 'close';
+                }
+            });
+
+            // Close the menu when a link is clicked
+            const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Hide the menu
+                    mobileMenu.classList.add('hidden');
+                    // Reset the icon to the hamburger state
+                    hamburgerIcon.innerHTML = 'menu';
+                });
+            });
+
+            // --- UPDATED JAVASCRIPT FOR FORM SUBMISSION TO ZAPIER WEBHOOK ---
+            const form = document.getElementById('contactForm');
+            const messageBox = document.getElementById('messageBox');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // 🚨 IMPORTANT: Replace 'YOUR_ZAPIER_WEBHOOK_URL_HERE' with your actual URL from Zapier
+            const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/23993076/u6k1jjg/';
+
+            form.addEventListener('submit', async function (event) {
+                // Prevent the default form submission behavior (page refresh)
+                event.preventDefault();
+
+                // Show a loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Get the form data
+                const formData = new FormData(form);
+
+                try {
+                    // Send the data directly as FormData.
+                    // The fetch API will automatically set the correct Content-Type header.
+                    const response = await fetch(ZAPIER_WEBHOOK_URL, {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    // Check if the server responded successfully (Zapier returns 200)
+                    if (response.ok) {
+                        showMessage('Message sent successfully! We will get back to you shortly.', 'success');
+                        form.reset(); // Clear the form on success
+                    } else {
+                        showMessage('Failed to send message. Please try again.', 'error');
+                    }
+                } catch (error) {
+                    // Handle network or other errors
+                    console.error('Submission error:', error);
+                    showMessage('An unexpected error occurred. Please try again later.', 'error');
+                } finally {
+                    // Reset the button text and state
+                    submitButton.textContent = 'Send Message';
+                    submitButton.disabled = false;
+                }
+            });
+
+            // Helper function to display messages
+            function showMessage(message, type) {
+                messageBox.textContent = message;
+                messageBox.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+                if (type === 'success') {
+                    messageBox.classList.add('bg-green-100', 'text-green-700');
+                } else {
+                    messageBox.classList.add('bg-red-100', 'text-red-700');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

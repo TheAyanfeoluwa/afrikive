@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrikive Blog - John Allan Masese</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../favicon.png" rel="apple-touch-icon">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Fonts: Add your @font-face rules here -->
+    <style>
+        /* Global Monochrome Color Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-light-grey: #F0F0F0;
+            --color-medium-grey: #6B7280;
+            --color-dark-grey: #333333;
+            --color-black: #000000;
+
+            /* Page-Specific Accent Colors for Header Hover Effects */
+            --color-accent-home: #4CAF50;
+            --color-accent-about: #3B82F6;
+            --color-accent-blog: #C79A6B;
+            /* Orange-brown from Desert theme */
+            --color-accent-contribute: #1F5A3F;
+            --color-accent-contact: #CD611E;
+
+            /* Blog Page specific accents */
+            --color-page-accent-brown: #8B4513;
+            --color-page-soft-brown: #D2B48C;
+        }
+
+        body {
+            font-family: 'Andika', 'Inter', sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-dark-grey);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Black Mango Regular', 'Andika', sans-serif;
+            color: var(--color-dark-grey);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <!-- Google Fonts - Inter (kept as a robust fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder -->
+                <!-- Updated path to point to logo in parent directory -->
+                <img src="../assets/images/desert-removebg-preview.png" alt="Afrikive Logo"
+                    class="w-10 h-10 rounded-full object-cover ">
+                <a href="../index.html" class="text-2xl font-bold text-white">Afrikive</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="../index.html"
+                            class="text-white hover:text-[var(--color-accent-home)] transition-colors duration-200 font-medium">Home</a>
+                    </li>
+                    <li><a href="../About.html"
+                            class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium">About</a>
+                    </li>
+                    <!-- <li><a href="../Blog.html" class="text-[var(--color-accent-blog)] font-bold">Blog</a></li> Not link -->
+                    <li><a href="../Contribute.html"
+                            class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium">Contribute</a>
+                    </li>
+                    <li><a href="../contact.html"
+                            class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative w-full px-4 mb-16 overflow-hidden bg-cover bg-center min-h-screen flex items-center justify-center"
+            style="background-image: url('../assets/images/Newly elected Prime Minister Jomo Kenyatta alongside greeting crowds Prince William 1963.png');">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-[var(--color-dark-grey)] to-[var(--color-accent-blog)] opacity-60">
+            </div>
+            <div id="blog-hero-text-content"
+                class="relative z-10 text-center max-w-4xl mx-auto text-white opacity-0 transition-opacity duration-1000 ease-in pt-20">
+                <p
+                    class="text-lg md:text-xl font-light tracking-widest uppercase mb-4 text-[var(--color-page-soft-brown)]">
+                    Navigating the Personal Journey
+                </p>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white">
+                    JOHN ALLAN MASESE: FROM STRUGGLE TO FREEDOM AND BEYOND
+                </h1>
+                <p class="text-xl md:text-2xl font-light opacity-90 pb-6">
+                    Before, During, and After Kenyan Independence
+                </p>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 md:px-5 lg:px-5 py-16 max-w-4xl"> <!-- Centered content container -->
+
+            <!-- Story Content -->
+            <article class="space-y-12">
+
+                <!-- Text Block 1 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        John Allan Masese was born in 1944 amongst the rich shades of green and yellow that made up the
+                        grandiose plantations of Kericho. The aroma of long-lost tales traveled in and out of the
+                        valleys, burnt and hidden under layers of distortion. Masese's father worked within the endless
+                        fields of tea, the boy, little and lithe, often listened with frightful ears to the events
+                        unfolding just over the valleys. They would whisper 'The Mau Mau have moved on to... and have
+                        captured...'. He listened with fear, imagining and mentally preparing for the possibility of his
+                        family's demise.
+                    </p>
+                    <p>
+                        Even worse was the looming anxiety of the European defense forces wreaking havoc, shooting
+                        randomly or raiding the people. They justified this under their so-called 'moral obligation' to
+                        restore peace by any means necessary. To regain "their" colony, "their" Kenya. John lived with a
+                        constant dread that one day, he too might become a victim of an event similar to the Lari
+                        massacre.
+                    </p>
+                </div>
+
+                <!-- Image Block 1: Profitable Settler Agriculture -->
+                <figure class="my-8">
+                    <img src="../assets/images/Labour Control and the Establishment of Profitable Settler Agriculture in Colonial Kenya, c. 1920-45 – African Economic History Network.png"
+                        alt="Labour Control in Colonial Kenya" class="w-full h-auto rounded-lg shadow-md object-cover">
+                    <figcaption class="text-sm text-center text-[var(--color-medium-grey)] mt-2 italic">Labour Control
+                        and the Establishment of Profitable Settler Agriculture in Colonial Kenya, c. 1920-45
+                    </figcaption>
+                </figure>
+
+                <!-- Text Block 2 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        As the dew hung heavy on the budding grass, John rose with the sun. Alongside the other shadows
+                        in the morning mist, John would go off to school. Off to a dimly lit classroom to read off a
+                        blackboard and learn of situations a lifetime away from his own. His classrooms overflowed with
+                        both young Black boys and brilliance. Yet, forced into learning only of selective history that
+                        frequently excluded them unless when discussing their people's subordination. In the breaks the
+                        boys huddled, convening to share the stories they had heard the night before. Fright shrouded
+                        with a sort of humor.
+                    </p>
+                    <p>
+                        'They say so and so is hiding a pistol underneath his hair,' they giggled, laughing at the
+                        absurdity whilst internally longing for more information. Apropos of this amusing niter-natter
+                        was an officer who used to ride a motorcycle around the province, his hair growing like a
+                        healthy tree, round and trimmed. He could well have a pistol hidden within those branches. The
+                        officer was taken to the detention center soon after under suspicion of being a Freedom fighter.
+                    </p>
+                </div>
+
+                <!-- Image Block 2: Field Marshal Mwariama -->
+                <figure class="my-8">
+                    <img src="../assets/images/Prime Minister Jomo Kenyatta with 'Field Marshal' Mwariama.png"
+                        alt="Prime Minister Jomo Kenyatta with Field Marshal Mwariama"
+                        class="w-full h-auto rounded-lg shadow-md object-cover">
+                    <figcaption class="text-sm text-center text-[var(--color-medium-grey)] mt-2 italic">Prime Minister
+                        Jomo Kenyatta with 'Field Marshal' Mwariama</figcaption>
+                </figure>
+
+                <!-- Text Block 3 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        As the seasons turned and the jacaranda trees bloomed, turning the wind a vibrant shade of
+                        purple, John's primary school was coming to an end. Amongst 30 others in a cramped room, he was
+                        handed an exam paper. The Common Entrance exam for the Africans. The whites were allowed to take
+                        the KCPE Kenyan Certificate of Primary Education. They didn't have to worry about the next stage
+                        in the same way he did. The way the 30 others did. They all knew the chances of making it to the
+                        next stage were slim as they spitefully scratched at the paper with a feeling of inferiority
+                        devouring their minds. The process of sieving had begun. 15 passed. Only 3 including John were
+                        able to go to secondary school.
+                    </p>
+                    <p>
+                        High school was a different experience. The law now forced European schools to take all races.
+                        Of course, treatment was not the same, and much like other aspects of society, privilege was 'a
+                        gradient-white, Asian, then Black'. However, change was on the horizon and all Kenyans were
+                        beginning to see a future of choices. Choices for them, by them. Looking to the future, there
+                        was only one university - The University of East Africa in Dar Es Salaam. Opportunities for
+                        higher education were scarce in East Africa. There were constituent colleges spread out across
+                        the region like Makerere in Uganda but all in all 'there were very limited institutions for
+                        African learning'.
+                    </p>
+                </div>
+
+                <!-- Image Block 3: Makerere University -->
+                <figure class="my-8">
+                    <img src="../assets/images/Makerere University 1960's.png" alt="Makerere University in the 1960s"
+                        class="w-full h-auto rounded-lg shadow-md object-cover">
+                    <figcaption class="text-sm text-center text-[var(--color-medium-grey)] mt-2 italic">Makerere
+                        University, 1960s</figcaption>
+                </figure>
+
+                <!-- Text Block 4 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Amid this landscape, on one pivotal day, incoming president Jomo Kenyatta was released. Word
+                        spread in a matter of minutes that he would be passing through the Kisiitown Kisumu Highway a
+                        somewhat close distance to John's school in Nyaparoro. The air throughout the school fizzled
+                        with anticipation. Students daring to request allowance to witness the momentous event were met
+                        with a red-faced headmaster. 'No, you can't, that's not a good person to go and see. He doesn't
+                        even believe in God!'. To the white Headmaster, this was the genesis of a recession, just as it
+                        was a progression to the Black people. Regardless the students rioted and ran to observe the
+                        passing car, cheering with a new sense of honor and dignity within their souls.
+                    </p>
+                    <p>
+                        As a result of their disobedience, they were met with manual labor punishment. The next week
+                        they became slaves, their education revoked, and their bodies put to work. Despite everything,
+                        Masese was content. The sense of satisfaction gained surpassed consequences. He witnessed a
+                        turning point in Kenya's history. Slowly changes began to shape the nation. Prince of Whales
+                        School became Kenya High School; hospitals began to accept patients based on need rather than
+                        race. 'Land-less' Kenyans moved from the small, overcrowded "native reserves," which had been
+                        'graciously' allotted to them on the White man's thousand-acre estate, under a 999-year lease
+                        from the distant British monarchy. Then, in 1963, the rise of internal self-government began to
+                        shift the balance of legal and social power, offering Africans better opportunities and making
+                        liberties an entitlement instead of a privilege.
+                    </p>
+                </div>
+
+                <!-- Image Block 4: Jomo Kenyatta and crowds -->
+                <figure class="my-8">
+                    <img src="../assets/images/Newly elected Prime Minister Jomo Kenyatta alongside greeting crowds Prince William 1963.png"
+                        alt="Newly elected Prime Minister Jomo Kenyatta alongside greeting crowds"
+                        class="w-full h-auto rounded-lg shadow-md object-cover">
+                    <figcaption class="text-sm text-center text-[var(--color-medium-grey)] mt-2 italic">Newly elected
+                        Prime Minister Jomo Kenyatta alongside greeting crowds, 1963</figcaption>
+                </figure>
+
+                <!-- Text Block 5 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Post Kenya's achievement of independence (1962), John attended the newly established Kenyan
+                        School of Law. It was founded under the collaborative agitation of the Kenyan government and a
+                        group of local lawyers. As John entered the legal field, remises of the struggle for equality
+                        remained evident. There was a huge gap in the profession with roughly 99% of lawyers being white
+                        and non-African. Simply put, there was much to be done that could not be achieved in a fleeting
+                        instant. Despite the achievement of freedom from Britain's grasp, there were more people to be
+                        trained and more institutions to be founded.
+                    </p>
+                    <p>
+                        In a nutshell, independence brought numerous opportunities to local people socially,
+                        economically, and politically. The political shift fostered a never-before-seen environment
+                        where human rights became accessible to all races. While Kenya's constitution no longer supports
+                        discrimination, the ongoing battle in certain parts of the republic persists, with tradition and
+                        statute remaining at loggerheads. Masese provides the example of a young widow left with only a
+                        daughter to inherit her late husband's land. Dissatisfied with this option she adopted 4 boys;
+                        however, they greeted her with foul treatment. The lady decided to give her daughter a piece of
+                        the land, leaving the rest to the boys. The community was in uproar, chasing the girl away
+                        despite a court order allowing her to own the land. Steeped up in tradition they went against
+                        the government itself.
+                    </p>
+                    <p>
+                        Only by reconciling the past can Kenya fully realize its purpose within progress and unity. As
+                        John puts it, "Kenya is the best in the world". But to truly be the best, progress must be
+                        relentless, and the courage to evolve must never waver. The fight must continue, and the
+                        openness must stay consistent. For John, experiencing independence meant a myriad of
+                        opportunities unfolding before him . The struggle has shaped who he is today, allowing him to
+                        practice and teach law as a Kenyan citizen . However, it is essential to recognize that
+                        implementation of the progressive reforms remains challenging .
+                    </p>
+                </div>
+
+                <!-- Image Block 5: Parliament buildings -->
+                <figure class="my-8">
+                    <img src="../assets/images/Inside the Parliament buildings in Nairobi, Kenya, on 17th October, 2024; PICTURE; Reuter   Monicah Mwangi.png"
+                        alt="Parliament buildings in Nairobi, Kenya"
+                        class="w-full h-auto rounded-lg shadow-md object-cover">
+                    <figcaption class="text-sm text-center text-[var(--color-medium-grey)] mt-2 italic">Inside the
+                        Parliament buildings in Nairobi, Kenya, on 17th October, 2024</figcaption>
+                </figure>
+
+                <!-- PDF Link -->
+                <div class="mt-12 p-6 bg-[var(--color-light-grey)] rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-[var(--color-dark-grey)] mb-4">Original Historiography</h3>
+
+                    <a href="../Original Historiography.pdf" target="_blank"
+                        class="inline-block bg-[var(--color-page-accent-brown)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-page-soft-brown)] transition-colors duration-300">
+                        View Original Historiography (PDF)
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section (Reused) -->
+    <footer class="bg-[#4A2C2F] text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Afrikive. All rights reserved.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank"
+                    class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">Instagram</a>
+                <a href="https://pinterest.com/afrikive/" target="_blank"
+                    class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">Pinterest</a>
+                <span class="text-gray-200">For further inquiries, contact:</span>
+                <a href="mailto:contact@afrikive.org"
+                    class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">contact@afrikive.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to make the hero text fade in on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroText = document.getElementById('blog-hero-text-content');
+            if (heroText) {
+                // Remove opacity-0 after a short delay to allow CSS transition to work
+                setTimeout(() => {
+                    heroText.classList.remove('opacity-0');
+                }, 100); // Small delay to ensure CSS is applied before removal
+            }
+        });
+    </script>
+
+</body>
+
+</html>

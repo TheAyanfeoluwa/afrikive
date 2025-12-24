@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrikive Blog - Preserving African Stories</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Fonts: Add your @font-face rules here -->
+    <style>
+        @font-face {
+            font-family: 'Andika';
+            src: url('Andika/Andika-Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /*
+        @font-face {
+            font-family: 'Black Mango Regular';
+            src: url('Black Mango Regular/Black Mango Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+*/
+
+        /* Global Monochrome Color Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-light-grey: #F0F0F0;
+            /* For subtle background variations */
+            --color-medium-grey: #B0B0B0;
+            /* For secondary text, subtle borders */
+            --color-dark-grey: #333333;
+            /* For main text, strong elements, footer */
+            --color-black: #000000;
+            /* For very strong contrasts if needed */
+
+            /* Page-Specific Accent Colors for Hover Effects */
+            --color-accent-about: grey;
+            /* Blue for About page hover */
+            --color-accent-blog: #C79A6B;
+            /* Orange-brown from Desert theme */
+            --color-accent-contribute: #1F5A3F;
+            /* Deeper Green from Forest theme */
+            --color-accent-contact: #CD611E;
+            /* Warm Orange-Brown from Sunset theme */
+            --color-accent-home: #4CAF50;
+            /* Assuming Home will use the About page's accent for now */
+
+            /* New brown accent colors for the blog page */
+            --color-accent-brown: #8B4513;
+            /* A strong brown for accents */
+            --color-accent-orange: #CD611E;
+            /* Keeping this for contrast if needed, but primary accent will be brown */
+            --color-accent-yellow: #D2B48C;
+            /* A lighter brown/tan for hover effects */
+        }
+
+        body {
+            font-family: 'Andika', 'Inter', sans-serif;
+            /* Andika as primary, Inter as fallback, then generic sans-serif */
+            background-color: var(--color-white);
+            /* Mostly white background */
+            color: var(--color-dark-grey);
+            /* Main text color */
+        }
+
+        /* Apply Black Mango Regular to headings for branding */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Black Mango Regular', 'Andika', sans-serif;
+            color: var(--color-dark-grey);
+            /* Dark grey for headings */
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <!-- Google Fonts - Inter (kept as a robust fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header Section - Made transparent and fixed position -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder: Replace src with your logo URL -->
+                <img src="assets/images/desert-removebg-preview.png" alt="Afrikive Logo"
+                    class="w-10 h-10 rounded-full object-cover border-0 border-white">
+                <a href="#" class="text-2xl font-bold text-white">Afrikive</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#"
+                            class="text-white hover:text-[var(--color-accent-home)] transition-colors duration-200 font-medium">Home</a>
+                    </li>
+                    <li><a href="About.html"
+                            class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium">About</a>
+                    </li>
+                    <li><a href="#" class="text-[var(--color-accent-blog)] font-bold">Blog</a></li>
+                    <!-- Active link for Blog -->
+                    <li><a href="Contribute.html"
+                            class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium">Contribute</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Page Title Section (Hero-style section) -->
+        <!-- Changed the min-h-screen class to apply on all screen sizes -->
+        <section
+            class="relative w-full px-4 mb-16 overflow-hidden bg-cover bg-center min-h-screen flex items-center justify-center"
+            style="background-image: url('assets/backgrounds/blog\ background.jpg');">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-[var(--color-dark-grey)] to-[var(--color-accent-brown)] opacity-60">
+            </div> <!-- Adjusted overlay for monochrome feel -->
+            <div id="blog-hero-text-content"
+                class="relative z-10 text-center max-w-4xl mx-auto text-white opacity-0 transition-opacity duration-1000 ease-in pt-20">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white">Your Stories,Our Past</h1>
+                <p class="text-xl md:text-2xl font-light opacity-90 mt-4 pb-6">
+                    Dive into the richness of African memories, histories, and identities.
+                </p>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-16"> <!-- Container for the rest of the content -->
+
+            <!-- Featured Story Section -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Featured Story</h2>
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row border-b-4 border-[var(--color-accent-brown)]">
+                    <!-- Left Column: Text Content -->
+                    <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <p class="text-sm font-semibold text-[var(--color-accent-brown)] uppercase mb-2">Category: Oral
+                            History</p>
+                        <h3 class="text-4xl font-bold text-[var(--color-dark-grey)] mb-4 leading-tight">
+                            The Whispers of the Baobab: A Grandfather's Legacy
+                        </h3>
+                        <p class="text-lg text-[var(--color-dark-grey)] mb-6">
+                            Explore the timeless wisdom passed down through generations, vividly brought to life through
+                            the oral narratives of West African elders. This story delves into the importance of
+                            community and ancestral knowledge.
+                        </p>
+                        <p class="text-sm text-[var(--color-medium-grey)]">
+                            <span class="font-semibold text-[var(--color-accent-brown)]">Read Time:</span> 15 Mins
+                        </p>
+                        <a href="#"
+                            class="mt-6 inline-block bg-[var(--color-accent-brown)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-accent-yellow)] transition-colors duration-300 transform hover:scale-105">
+                            Read Full Story
+                        </a>
+                    </div>
+                    <!-- Right Column: Image/Visual -->
+                    <div class="lg:w-1/2 bg-white flex items-center justify-center">
+                        <img src="https://placehold.co/800x500/E6D0B4/7B5C3D?text=Featured+Story+Image"
+                            alt="Featured Story Visual" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Stories Grid Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Recent Stories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post Card 1 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md overflow-hidden border-b-4 border-[var(--color-accent-brown)] transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=Blog+Image+1" alt="Blog Post 1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm font-semibold text-[var(--color-accent-brown)] uppercase mb-2">Category:
+                                Youth Histories</p>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-grey)] mb-2">
+                                The Rhythms of Tomorrow: Young Voices in Lagos
+                            </h3>
+                            <p class="text-base text-[var(--color-dark-grey)] mb-4 line-clamp-3">
+                                Discover how young creatives in Lagos are shaping their future while honoring their past
+                                through vibrant art and digital storytelling.
+                            </p>
+                            <a href="#"
+                                class="text-[var(--color-accent-brown)] hover:text-[var(--color-accent-yellow)] font-semibold text-sm">Read
+                                More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md overflow-hidden border-b-4 border-[var(--color-accent-brown)] transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=Blog+Image+2" alt="Blog Post 2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm font-semibold text-[var(--color-accent-brown)] uppercase mb-2">Category:
+                                Cultural Artifacts</p>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-grey)] mb-2">
+                                Unearthing Treasures: The Significance of Ancient Masks
+                            </h3>
+                            <p class="text-base text-[var(--color-dark-grey)] mb-4 line-clamp-3">
+                                A deep dive into the historical and spiritual importance of traditional African masks,
+                                and their role in preserving cultural heritage.
+                            </p>
+                            <a href="#"
+                                class="text-[var(--color-accent-brown)] hover:text-[var(--color-accent-yellow)] font-semibold text-sm">Read
+                                More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 3 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md overflow-hidden border-b-4 border-[var(--color-accent-brown)] transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/400x250/F0F0F0/333333?text=Blog+Image+3" alt="Blog Post 3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm font-semibold text-[var(--color-accent-brown)] uppercase mb-2">Category:
+                                Diaspora Stories</p>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-grey)] mb-2">
+                                Bridging Continents: African Identity in the Caribbean
+                            </h3>
+                            <p class="text-base text-[var(--color-dark-grey)] mb-4 line-clamp-3">
+                                How African traditions and memories continue to thrive and evolve within the vibrant
+                                communities of the Caribbean diaspora.
+                            </p>
+                            <a href="#"
+                                class="text-[var(--color-accent-brown)] hover:text-[var(--color-accent-yellow)] font-semibold text-sm">Read
+                                More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more blog post cards as needed -->
+                </div>
+                <div class="text-center mt-12">
+                    <button
+                        class="bg-[var(--color-accent-brown)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-accent-orange)] transition-colors duration-300 transform hover:scale-105">
+                        Load More Stories
+                    </button>
+                </div>
+            </section>
+
+        </div> <!-- End of container for the rest of the content -->
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-[var(--color-dark-grey)] py-8 mt-12 border-t border-[var(--color-accent-brown)]">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Afrikive. All rights reserved.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Instagram</a>
+                <a href="https://www.pinterest.com/afrikive/"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Pinterest</a>
+                <span class="text-[var(--color-dark-grey)]">For further inquiries, contact:</span>
+                <a href="mailto:contact@afrikive.org"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">contact@afrikive.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to make the hero text fade in on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const blogHeroText = document.getElementById('blog-hero-text-content');
+            if (blogHeroText) {
+                // Remove opacity-0 after a short delay to allow CSS transition to work
+                setTimeout(() => {
+                    blogHeroText.classList.remove('opacity-0');
+                }, 100); // Small delay to ensure CSS is applied before removal
+            }
+        });
+    </script>
+
+</body>
+
+</html>

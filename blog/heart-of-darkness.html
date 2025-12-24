@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrikive Blog - Heart of Darkness</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../favicon.png" rel="apple-touch-icon">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Fonts: Add your @font-face rules here -->
+    <style>
+        /*
+        @font-face {
+            font-family: 'Andika';
+            src: url('../Andika/Andika-Regular.woff2') format('woff2'),
+                 url('../Andika/Andika-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Black Mango Regular';
+            src: url('../Black Mango Regular/BlackMangoRegular.woff2') format('woff2'),
+                 url('../Black Mango Regular/BlackMangoRegular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        */
+
+        /* Global Monochrome Color Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-light-grey: #F0F0F0;
+            --color-medium-grey: #6B7280;
+            --color-dark-grey: #333333;
+            --color-black: #000000;
+
+            /* Page-Specific Accent Colors for Header Hover Effects */
+            --color-accent-home: #4CAF50;
+            --color-accent-about: #3B82F6;
+            --color-accent-blog: #C79A6B; /* Orange-brown from Desert theme */
+            --color-accent-contribute: #1F5A3F;
+            --color-accent-contact: #CD611E;
+
+            /* Blog Page specific accents */
+            --color-page-accent-brown: #8B4513;
+            --color-page-soft-brown: #D2B48C;
+        }
+
+        body {
+            font-family: 'Andika', 'Inter', sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-dark-grey);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Black Mango Regular', 'Andika', sans-serif;
+            color: var(--color-dark-grey);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <!-- Google Fonts - Inter (kept as a robust fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder -->
+                <!-- Updated path to point to logo in parent directory -->
+                <img src="../desert-removebg-preview.png" alt="Afrikive Logo" class="w-10 h-10 rounded-full object-cover ">
+                <a href="../index.html" class="text-2xl font-bold text-white">Afrikive</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="../index.html" class="text-white hover:text-[var(--color-accent-home)] transition-colors duration-200 font-medium">Home</a></li>
+                    <li><a href="../About.html" class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium">About</a></li>
+                    <!-- <li><a href="../Blog.html" class="text-[var(--color-accent-blog)] font-bold">Blog</a></li> Not link -->
+                    <li><a href="../Contribute.html" class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium">Contribute</a></li>
+                    <li><a href="../contact.html" class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative w-full px-4 mb-16 overflow-hidden bg-cover bg-center min-h-screen flex items-center justify-center"
+                 style="background-image: url('https://i.ibb.co/twKFX6NP/Image.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--color-dark-grey)] to-[var(--color-accent-blog)] opacity-60"></div>
+            <div id="blog-hero-text-content" class="relative z-10 text-center max-w-4xl mx-auto text-white opacity-0 transition-opacity duration-1000 ease-in pt-20">
+                <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-4 text-[var(--color-page-soft-brown)]">
+                    Creative Historiography
+                </p>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
+                    Heart of Darkness
+                </h1>
+                <p class="text-xl md:text-2xl font-light opacity-90 pb-6">
+                    A journey through memory, freedom, and the enduring spirit of a nation.
+                </p>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 md:px-5 lg:px-5 py-16 max-w-4xl"> <!-- Centered content container -->
+
+            <!-- Story Content -->
+            <article class="space-y-12">
+                
+                <!-- Text Block 1 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Under the wide, purple canopy of the jacaranda tree, I sit next to Grandma, my back against the cool bark, watching her fingers gently trace the lines in the sand. I love these afternoons. The world slows down here. Grandma has this way of pulling you into her stories, making you feel like you're right there with her.
+                    </p>
+                    <p>
+                        "Grandma," I ask softly, "what story will you tell me today?" She pauses, her weathered hands folding neatly in her lap as she stares at the horizon, her gaze drifting over memories only she understands.
+                    </p>
+                    <p class="text-center my-8">***</p>
+                    <p>
+                        I shift the green fabric through the machine's gaping mouth, my feet swinging the treadle in a disjointed symphony - creak... creak...creak. With each backward motion, the old sewing machine creaks, a staccato rhythm echoing against the soft sounds of dawn. This shapeless cut of kitenge beneath the machine's mouth, a burst of green, lies in wait to be born.
+                    </p>
+                    <p>
+                        Outside the window with the tilted pane, an easterly breeze carries the soft habari's and U hali gani of a new day. The trees rumble in the distance, dressed in the same colour that blesses my hands. To and fro, to and fro, their branches contort and curve to the will of the wind.
+                    </p>
+                    <p>
+                        Like me, they are restless for life.
+                    </p>
+                </div>
+
+                <!-- Image Block 1 -->
+                <figure class="my-8">
+                    <img src="https://i.ibb.co/t573Rgy/Image-1.jpg" alt="Visual representation of the story" class="w-full h-auto rounded-lg shadow-md object-cover">
+                </figure>
+
+                 <!-- Text Block 2 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Today, Tanzania is ours. Even those who have long been kept down will stand for uhuru and our green will be shown for our might. Crrrrr... Crrrrr.... the radio crackles to life.
+                    </p>
+                    <p>
+                        'We do this to unite our people," he says.
+                    </p>
+                    <p>
+                        Another one of Kawawa's announcements fill the room. He's going on about another one of his 'community projects. This time it's 'Operation Dress-up,' urging the Maasai to abandon their traditional robes for something more 'modern.' By modern, I know he means Western: a stiff ankle-length skirt and a far too starched buttoned-up blouse. As if wrapping us tighter will somehow make us more free. Kawawa also didn't like when we wore short skirts or dresses, he called them 'decadent dress' that needed to be 'eradicated'. I quickly turned the knob, switching the radio channel, but his words linger. His foreign-educated voice, measured and tinged with a British lilt is far too reminiscent of old authority.
+                    </p>
+                    <p>
+                        Some things never change.
+                    </p>
+                     <p class="text-center my-8">***</p>
+                    <p>
+                        The dress is finished.
+                    </p>
+                     <p>
+                        Standing before the mirror, I behold the work of my hands. The hem of the skirt - cut sharp - reaches just above my knees, daring to show more than my lower shin and the loose sleeves fall just centimeters after they begin. Molded to this verdant cloth was my 5 '8 frame, the slender curve of my legs and my hips that jut out like the lower middle of a ceramic pitcher. The fabric clings to my skin in a way that feels new, unburdened.
+                    </p>
+                    <p>
+                        Today, I am part of something bigger. A new Tanzania.
+                    </p>
+                </div>
+                
+                 <!-- Image Block 2 -->
+                <figure class="my-8">
+                    <img src="https://i.ibb.co/m59xZJLz/Image-2.jpg" alt="Visual representation of the story" class="w-full h-auto rounded-lg shadow-md object-cover">
+                </figure>
+
+                <!-- Text Block 3 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Outside, the air is rife with an uncontrolled fervor. The streets are alive with color, green everywhere. Music spills from radios, speakers, and people's mouths. 'Tanzania Nakupenda Kwa Moyo Wote sounds loudly, with its infectious rising drums.
+                    </p>
+                    <p>
+                        Stepping outside, my feet find rhythm on the dirt road and suddenly I can't remember yesterday's worries. My hands are aimed to the sky and my knees bent, pre chakacha. Nothing feels as good as freedom when it feels like you can have it all until you can't no more. And in my case, my no more came all too soon.
+                    </p>
+                    <p>
+                        There's something pulling at the edges of my happiness. A comment here, a sideways glance there. Mama Faraji whispers, her eyes flicking over my dress, her lips curling downward as if something smells sour in the air. Mzee³, arms crossed, frowns as I pass. His gaze is sharp, too sharp, and I can feel it dig into the back of my neck. The feeling of disapproval is tangible. The same people, my people, who have just tasted the sweetness of freedom, are now policing what it should look like. What it should wear.
+                    </p>
+                    <p>
+                         Some things never change.
+                    </p>
+                    <p>
+                        I feel the tightening in my chest and the uneasy weight of eyes following me. Overwhelmed, I made my way out of the market square. I could hear the clatter of the vendors, the hum of excited conversation, but underneath it all, the sound of black rubber worn boots approaching grows louder. Heavy. Deliberate.
+                    </p>
+                </div>
+
+                 <!-- Audio Block Placeholder -->
+                <div class="bg-[var(--color-light-grey)] p-8 rounded-xl border-l-4 border-[var(--color-page-accent-brown)] shadow-sm">
+                    <h3 class="text-xl font-bold text-[var(--color-dark-grey)] mb-4 flex items-center">
+                        <i class="fas fa-headphones-alt mr-3 text-[var(--color-page-accent-brown)]"></i> Listen to the Story
+                    </h3>
+                    <audio controls class="w-full focus:outline-none">
+                        <!-- Placeholder audio source -->
+                        <source src="" type="audio/mpeg">
+                        Audio file coming soon.
+                    </audio>
+                    <p class="text-sm text-[var(--color-medium-grey)] mt-2 italic">Audio narration of "Heart of Darkness".</p>
+                </div>
+
+                <!-- Text Block 4 -->
+                <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        A pair of police officers steps into view. Their uniforms are crisp and too formal for the day and their glares are too cold for our tropical climate. Their eyes land on me, too icy for the warmth of the people around them. It's all too familiar.
+                    </p>
+                    <p>
+                        "What do you think you're wearing?" one of them growls.
+                    </p>
+                    <p>
+                        I blink, momentarily unsure of my response. I knew 'a two-piece cropped kitenge' would not suffice.
+                    </p>
+                    <p>
+                        I attempt to straighten up, but the weight of his words bears down on me.
+                    </p>
+                    <p>
+                        'Malaya!' answer me' he continues.
+                    </p>
+                    <p>
+                        They don't just condemn my dress, they condemn my person. The way I carry myself; the way I am too free. These officers that stand before me are the new enforcers of a freedom that is distorted and reshaped, back into the mold of something old and oppressive.
+                    </p>
+                    <p>
+                        The officer jerks his head, motioning for me to follow. The world around me doesn't slow down. People walk past as though nothing is happening. The music plays on like I don't exist. They walk me down the street to a dingy building with a sign much too large that reads in ironically green letters, 'Selander Bridge Police Station'
+                    </p>
+                    <p class="text-center my-8">***</p>
+                     <p>
+                        The air inside the police station is stifling. The walls are stained, their once-white paint peels and curls in on itself like a discarded snake's skin. The floor beneath me is rough, coated in dust and remnants of broken spirits. My pulse races as the officers tower over me, their faces stern their eyes cold, too cold.
+                    </p>
+                    <p>
+                        I try to speak, to ask why why is it now, when we are free, they treat me like this? But the words falter in my throat as one of them grabs me by the wrist. His grip is like iron, unyielding, forcing me to bend, to comply. I stumble, my knees scraping the unforgiving ground, and then, the first blow of the baton lands.
+                    </p>
+                </div>
+
+                 <!-- Image Block 3 -->
+                <figure class="my-8">
+                    <img src="https://i.ibb.co/d4xrpQ6X/Image-3.jpg" alt="Visual representation of the story" class="w-full h-auto rounded-lg shadow-md object-cover">
+                </figure>
+
+                <!-- Text Block 5 -->
+                 <div class="prose prose-lg text-[var(--color-medium-grey)] mx-auto">
+                    <p>
+                        Pain blossoms through my side, spreading like wildfire. I gasp, clutching at my ribs as another blow follows, and then another. I lay on the ground now, the cold concrete biting into my skin, as one of them kicks me hard in the stomach.
+                    </p>
+                    <p>
+                        And then it happens. His face hardens, his jaw clenches, and for the briefest moment, I see someone else. Something else. The flicker of a ghost, a shadow behind his eyes, that resides beneath the surface of his skin.
+                    </p>
+                    <p>
+                        I know what it is. This man, this native man that stands over me, is not who he thinks he is. I can see it now. The authority he wears is not his own. The rules he enforces, are not born of his land, nor of his spirit. He is trapped, just like me.
+                    </p>
+                    <p>
+                        He believes himself the enforcer, the one in control. But his mind, like his uniform, is stitched together by hands that are no longer here but still make their presence known.
+                    </p>
+                    <p>
+                        My dress begins to tear at the seams, its threads pulling apart, and right there, lying lifelessly on the ground, I'm forced to reckon how delicate it all is. How easily it comes undone. Just like us and the liberation we fought for
+                    </p>
+                    <p>
+                        I watch his expression shift, the way his eyes stay cold, indifferent. It is the same look I have seen before, the same blankness worn by men who did not know our fathers' names. And yet, here he is, my brother by birth, looking at me as though I am nothing more than a thing to be subdued. These are the men who clap for freedom with chained wrists.
+                    </p>
+                    <p>
+                        We are free, and yet we are not.
+                    </p>
+                    <p>
+                         Some things never change
+                    </p>
+                    <p>
+                        I lower my eyes as he pulls me forward, his grip loosening just enough to haul me but not enough to free me. His face is blank, as though he has already forgotten the weight of his hand on my wrist, as though none of this matters.
+                    </p>
+                    <p>
+                        But it does matter. It matters more than he will ever know.
+                    </p>
+                    <p class="text-center my-8">***</p>
+                    <p>
+                        The sun is beginning to dip, casting a warm orange glow across the yard, signaling it's time for me to go. I stand, brushing the dirt from my dress, and glance back at Grandma, still sitting under the jacaranda tree. She's not watching me; instead, she's lost in thought, her fingers once again tracing invisible patterns in the air.
+                    </p>
+                    <p>
+                        But just before I turn to leave, she stands and steps towards me. I freeze as she reaches up, her hands gently pulling at the neckline of my top, adjusting it carefully to cover more of my chest, smoothing it down like a gentle reprimand. Her hands then move to my skirt, pulling it slightly lower over my knees, her fingers brushing the fabric as if ensuring I am as presentable as I can be for the world outside her home.
+                    </p>
+                    <p>
+                        I look up at her, the corners of her lips lifting ever so slightly in a knowing smile. She leans in and plants a soft kiss on my forehead,e.
+                    </p>
+                    <p>
+                        "Stay safe, Ashley," she says.
+                    </p>
+                    <p>
+                        Some things never change.
+                    </p>
+                </div>
+                
+                 <!-- Image Block 4 -->
+                <figure class="my-8">
+                    <img src="https://i.ibb.co/VYG4j1kt/Image-4.jpg" alt="Visual representation of the story" class="w-full h-auto rounded-lg shadow-md object-cover">
+                </figure>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section (Reused) -->
+    <footer class="bg-[#4A2C2F] text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Afrikive. All rights reserved.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank" class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">Instagram</a>
+                <a href="https://pinterest.com/afrikive/" target="_blank" class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">Pinterest</a>
+                <span class="text-gray-200">For further inquiries, contact:</span>
+                <a href="mailto:contact@afrikive.org" class="text-gray-200 hover:text-[#C08083] transition-colors duration-200">contact@afrikive.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to make the hero text fade in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroText = document.getElementById('blog-hero-text-content');
+            if (heroText) {
+                // Remove opacity-0 after a short delay to allow CSS transition to work
+                setTimeout(() => {
+                    heroText.classList.remove('opacity-0');
+                }, 100); // Small delay to ensure CSS is applied before removal
+            }
+        });
+    </script>
+
+</body>
+</html>

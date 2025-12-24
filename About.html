@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Afrikive - Preserving African Stories</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="./favicon.png" rel="apple-touch-icon">
+
+    <!-- Custom Fonts: Add your @font-face rules here -->
+    <style>
+        
+        @font-face {
+            font-family: 'Andika';
+            src: url('Andika/Andika-Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+/*
+        @font-face {
+            font-family: 'Black Mango Regular';
+            src: url('Black Mango Regular/Black Mango Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+*/        
+
+        /* Global Monochrome Color Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-light-grey: #F3F4F6; /* Very light grey, now used for subtle borders/shadows if needed, not main background */
+            --color-medium-grey: #6B7280; /* Medium grey for general text */
+            --color-dark-grey: #333333; /* Dark grey for strong text/elements, footer */
+            --color-black: #000000; /* For very strong contrasts if needed */
+
+            /* Page-Specific Accent Colors for Header Hover Effects */
+            --color-accent-home: #764b09; /* Green (default, can be adjusted for Home page's specific theme) */
+            --color-accent-about: grey; /* Blue for About page hover */
+            --color-accent-contribute: #1F5A3F; /* Deeper Green from Forest theme */
+            --color-accent-contact: #CD611E; /* Warm Orange-Brown from Sunset theme */
+
+            /* About Page's internal green hints */
+            --color-page-accent-green: #4CAF50; /* A vibrant green for hints/accents within the About page */
+            --color-page-soft-green: #8BC34A; /* A softer green for secondary accents/hovers within the About page */
+        }
+
+        body {
+            font-family: 'Andika', 'Inter', sans-serif; /* Andika as primary, Inter as fallback, then generic sans-serif */
+            background-color: var(--color-white); /* Mostly white background */
+            color: var(--color-medium-grey); /* Main text color */
+        }
+        /* Apply Black Mango Regular to headings for branding */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Black Mango Regular', 'Andika', sans-serif;
+            color: var(--color-dark-grey); /* Dark grey for headings */
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            
+        }
+    </style>
+    <!-- Google Fonts - Inter (kept as a robust fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section - Made transparent and fixed position -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            
+            <!-- Left side: Logo and Site Name -->
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder: Replace src with your logo URL -->
+                <img src="assets/logos/real about logo.png" onerror="this.onerror=null; this.src='https://placehold.co/40x40/E0F2F7/2C5282?text=AL'" alt="Afrikive Logo" class="w-10 h-10 rounded-full object-cover border-0 border-white">
+                <a href="#" class="text-2xl font-bold text-white">Afrikive</a>
+            </div>
+            
+            <!-- Right side: Main Navigation and Hamburger Menu -->
+            <div class="flex items-center space-x-3">
+                 <!-- Main Navigation - Hidden on mobile, visible on medium screens and up -->
+                <nav id="mobile-menu" class="hidden md:block">
+                    <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto p-4 md:p-0 bg-white/50 md:bg-transparent text-left md:text-center shadow-lg md:shadow-none backdrop-blur-sm rounded-lg">
+                        <li><a href="index.html" class="block text-black md:text-white hover:text-[var(--color-accent-home)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">Home</a></li>
+                        <li><a href="About.html" class="block text-black md:text-white text-[var(--color-accent-about)] transition-colors duration-200 font-bold py-2 px-4 md:px-0">About</a></li> <!-- Active link for About (blue) -->
+                        <li><a href="Contribute.html" class="block text-black md:text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">Contribute</a></li>
+                        <li><a href="contact.html" class="block text-black md:text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium py-2 px-4 md:px-0">Contact</a></li>
+                    </ul>
+                </nav>
+            
+                <!-- Hamburger menu button for small screens -->
+                <button id="hamburger-button" class="md:hidden p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                     <!-- Material Icon for Hamburger -->
+                    <i id="hamburger-icon" class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for About Page - A strong visual introduction -->
+        <section class="relative w-full px-4 mb-16 overflow-hidden bg-cover bg-center md:min-h-screen lg:min-h-screen flex items-center justify-center"
+                 style="background-image: url('assets/images/About\ Image.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-br from-black/50 to-transparent opacity-70"></div> <!-- Dark overlay for text readability -->
+            <div id="hero-text-content" class="relative z-10 text-center max-w-4xl mx-auto text-white opacity-0 transition-opacity duration-1000 ease-in pt-20">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
+                    Preserving African Memory, One Story at a Time.
+                </h1>
+                <p class="text-xl md:text-2xl font-light opacity-90 pb-6">
+                    Afrikive is a youth-led multimedia initiative dedicated to preserving African familial and youth histories across the continent and the diaspora through digital curation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main content container with responsive padding -->
+        <div class="container mx-auto px-4 md:px-5 lg:px-5 py-16">
+            <!-- WHAT IS AFRIKIVE? Section -->
+            <section class="bg-white p-10 rounded-xl shadow-lg mb-12 border-t-4 border-[var(--color-page-accent-green)]"> <!-- Enhanced styling -->
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-6 text-center">WHAT IS AFRIKIVE?</h2>
+                <div class="text-lg text-[var(--color-medium-grey)] leading-relaxed text-center max-w-4xl mx-auto">
+                    <p class="mb-4">
+                        Afrikive is a youth-led multimedia initiative dedicated to preserving African familial and youth histories across the continent and the diaspora through digital curation.
+                    </p>
+                    <p>
+                        By collecting and curating oral histories, photographs, videos, and other cultural artifacts, Afrikive seeks to preserve the intimate, intergenerational stories that shape African identities. By bridging memory and media, the platform offers a living archive that honors the past, reflects our present, and inspires future generations.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Vision and Mission Section - Side-by-side layout -->
+            <section class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-10 rounded-xl shadow-lg border-t-4 border-[var(--color-page-soft-green)]"> <!-- Lighter accent border -->
+                    <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-6">VISION STATEMENT</h2>
+                    <p class="text-lg text-[var(--color-medium-grey)] leading-relaxed">
+                        To become the leading youth-powered digital archive of African memory – bridging generations, empowering cultural ownership, and transforming how African stories are told, shared, and remembered globally.
+                    </p>
+                </div>
+                <div class="bg-white p-10 rounded-xl shadow-lg border-t-4 border-[var(--color-page-accent-green)]"> <!-- New green accent border -->
+                    <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-6">MISSION STATEMENT</h2>
+                    <p class="text-lg text-[var(--color-medium-grey)] leading-relaxed">
+                        Afrikive is committed to preserving and celebrating African familial and youth histories through accessible, multimedia storytelling. We digitally archive oral narratives, photographs, videos, and cultural artifacts from across the continent and diaspora, ensuring that the diverse and nuanced legacies of African communities are remembered, honored, and passed down through generations.
+                    </p>
+                </div>
+            </section>
+
+            <!-- WHY AFRIKIVE MATTERS Section -->
+            <section class="bg-white p-10 rounded-xl shadow-lg mb-16 border-b-4 border-[var(--color-page-soft-green)]"> <!-- Changed to bg-white -->
+                <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">WHY AFRIKIVE MATTERS</h2>
+                <ul class="list-none text-[var(--color-medium-grey)] leading-relaxed space-y-6 max-w-3xl mx-auto">
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[var(--color-page-accent-green)] mr-4">&#10003;</span> <!-- Checkmark icon with new green -->
+                        <div>
+                            <strong class="font-semibold text-[var(--color-dark-grey)]">Youth-Driven:</strong> Afrikive is powered by young Africans committed to capturing stories through an authentic, Afrocentric lens.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[var(--color-page-accent-green)] mr-4">&#10003;</span>
+                        <div>
+                            <strong class="font-semibold text-[var(--color-dark-grey)]">Credible Storytelling:</strong> We work with proven sources, including families, elders, and local historians, to ensure accuracy and respect for each narrative.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[var(--color-page-accent-green)] mr-4">&#10003;</span>
+                        <div>
+                            <strong class="font-semibold text-[var(--color-dark-grey)]">Deeply touching:</strong> Afrikive goes beyond surface-level portrayals, documenting the nuances of heritage, memory, and identity.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-2xl text-[var(--color-page-accent-green)] mr-4">&#10003;</span>
+                        <div>
+                            <strong class="font-semibold text-[var(--color-dark-grey)]">Preservation with Purpose:</strong> We are creating a digital archive that honors ancestral knowledge while inspiring future generations.
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Meet the Team Section -->
+            <section class="bg-white p-10 rounded-xl shadow-lg border-t-4 border-[var(--color-page-accent-green)]"> <!-- Changed to bg-white -->
+                <h2 class="text-4xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Meet the Team</h2>
+                <p class="text-lg text-[var(--color-medium-grey)] mb-12 text-center max-w-3xl mx-auto">
+                    Our dynamic, diverse team of content curators, researchers, project managers, developers, and outreach leaders collaborates across borders to bridge memory and media. Each member contributes a unique perspective and passion for cultural preservation.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Ajibola Balogun (Founder) -->
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=AJ" alt="Ajibola Balogun" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Ajibola Balogun</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Founder</p>
+                    </div>
+
+                    <!-- Ayira Browne (Social Media - Content Curator) -->
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=AB" alt="Ayira Browne" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Ayira Browne</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Social Media (Content Curator)</p>
+                    </div>
+
+                    <!-- Njoki Njoroge (Social Media) -->
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=NN" alt="Njoki Njoroge" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Njoki Njoroge</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Social Media</p>
+                    </div>
+
+                    <!-- Ayanfeoluwa Ayanlade (Website Development) -->
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=AA" alt="Ayanfeoluwa Ayanlade" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Ayanfeoluwa Ayanlade</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Chief Technology Officer</p>
+                    </div>
+
+                    <!-- Remaining Team Members in original order -->
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=MRD" alt="Maimouna Regina Diop" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Maimouna Regina Diop</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Content Curation & Research</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=GE" alt="Gavin Elbert" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Gavin Elbert</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Content Curation & Research</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=AA" alt="Ademidun Adebiyi" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Ademidun Adebiyi</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Project Management</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=CA" alt="Cameron Archer" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Cameron Archer</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Project Management</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=MAS" alt="Mohamed Adem Somai" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Mohamed Adem Somai</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Project Management</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=SM" alt="Sali Maket" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Sali Maket</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Community Outreach</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=MA" alt="Maryam Alade" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Maryam Alade</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Community Outreach</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=HT" alt="Harper Tyng" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Harper Tyng</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Community Outreach</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=AM" alt="Adiya Malhotra" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Adiya Malhotra</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Community Outreach</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 border-b-4 border-[var(--color-page-soft-green)]">
+                        <img src="https://placehold.co/120x120/E0F2F7/2C5282?text=JG" alt="Jeremy Gitiba" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-[var(--color-page-accent-green)]">
+                        <h3 class="text-xl font-semibold text-[var(--color-dark-grey)]">Jeremy Gitiba</h3>
+                        <p class="text-[var(--color-page-accent-green)] font-medium">Finance</p>
+                    </div>
+                </div>
+            </section>
+        </div> <!-- End of container for the rest of the content -->
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-[var(--color-dark-grey)] py-8 mt-12 border-t border-[var(--color-page-accent-green)]">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Afrikive. All rights reserved.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank" class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-green)] transition-colors duration-200">Instagram</a>
+                <a href="https://www.pinterest.com/afrikive/" class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-green)] transition-colors duration-200">Pinterest</a>
+                <span class="text-[var(--color-dark-grey)]">For further inquiries, contact:</span>
+                <a href="mailto:contact@afrikive.org" class="text-[var(--color-dark-grey)] hover:text-[var(--color-page-soft-green)] transition-colors duration-200">contact@afrikive.org</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to make the hero text fade in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroText = document.getElementById('hero-text-content');
+            if (heroText) {
+                // Remove opacity-0 after a short delay to allow CSS transition to work
+                setTimeout(() => {
+                    heroText.classList.remove('opacity-0');
+                }, 100); // Small delay to ensure CSS is applied before removal
+            }
+
+            // JavaScript for the hamburger menu
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+
+            hamburgerButton.addEventListener('click', () => {
+                // Toggle the 'hidden' class on the menu for show/hide behavior
+                mobileMenu.classList.toggle('hidden');
+                
+                // Toggle the icon between 'menu' and 'close'
+                if (mobileMenu.classList.contains('hidden')) {
+                    hamburgerIcon.innerHTML = 'menu';
+                } else {
+                    hamburgerIcon.innerHTML = 'close';
+                }
+            });
+
+            // Close the menu when a link is clicked
+            const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Hide the menu
+                    mobileMenu.classList.add('hidden');
+                    // Reset the icon to the hamburger state
+                    hamburgerIcon.innerHTML = 'menu';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
