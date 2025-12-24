@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html  class="w-mod-js wf-lato-i1-active wf-lato-i4-active wf-lato-i9-active wf-lato-n7-active wf-lato-i3-active wf-lato-n1-active wf-lato-n3-active wf-lato-n4-active wf-lato-i7-active wf-lato-n9-active wf-active w-mod-ix">
-  <head>
+<html
+    class="w-mod-js wf-lato-i1-active wf-lato-i4-active wf-lato-i9-active wf-lato-n7-active wf-lato-i3-active wf-lato-n1-active wf-lato-n3-active wf-lato-n4-active wf-lato-i7-active wf-lato-n9-active wf-active w-mod-ix">
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
@@ -16,12 +18,11 @@
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="./favicon.png" rel="apple-touch-icon">
     <link rel="stylesheet" href="Text Mask Video Scroll Animation_files/landing css.css">
-    
+
     <!-- Tailwind CSS CDN for styling the header -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom Fonts: Add your @font-face rules here -->
     <style>
-        
         @font-face {
             font-family: 'Andika';
             src: url('Andika/Andika-Regular.ttf');
@@ -29,7 +30,8 @@
             font-style: normal;
             font-display: swap;
         }
-/*
+
+        /*
         @font-face {
             font-family: 'Black Mango Regular';
             src: url('Black Mango Regular/Black Mango Regular.ttf');
@@ -37,62 +39,92 @@
             font-style: normal;
             font-display: swap;
         }
-*/       
+*/
 
         /* Global Monochrome Color Variables */
         :root {
             --color-white: #FFFFFF;
-            --color-light-grey: #F0F0F0; /* For subtle background variations */
-            --color-medium-grey: #B0B0B0; /* For secondary text, subtle borders */
-            --color-dark-grey: #333333; /* For main text, strong elements, footer */
-            --color-black: #000000; /* For very strong contrasts if needed */
+            --color-light-grey: #F0F0F0;
+            /* For subtle background variations */
+            --color-medium-grey: #B0B0B0;
+            /* For secondary text, subtle borders */
+            --color-dark-grey: #333333;
+            /* For main text, strong elements, footer */
+            --color-black: #000000;
+            /* For very strong contrasts if needed */
 
             /* Page-Specific Accent Colors for Hover Effects */
-            --color-accent-about: grey; /* Blue for About page hover */
-            --color-accent-home: #764b09; /* Orange---color-accent-yellow from Desert theme */
-            --color-accent-contribute: #1F5A3F; /* Deeper Green from Forest theme */
-            --color-accent-contact: #CD611E; /* Warm Orange---color-accent-yellow from Sunset theme */
+            --color-accent-about: grey;
+            /* Blue for About page hover */
+            --color-accent-home: #764b09;
+            /* Orange---color-accent-yellow from Desert theme */
+            --color-accent-contribute: #1F5A3F;
+            /* Deeper Green from Forest theme */
+            --color-accent-contact: #CD611E;
+            /* Warm Orange---color-accent-yellow from Sunset theme */
 
 
             /* New --color-accent-yellow accent colors for the home page */
-            --color-accent-yellow: #b38420; /* A strong --color-accent-yellow for accents */
-            --color-accent-orange: #CD611E; /* Keeping this for contrast if needed, but primary accent will be --color-accent-yellow */
-            --color-accent-light-yellow: #D2B48C; /* A lighter --color-accent-yellow/tan for hover effects */
+            --color-accent-yellow: #b38420;
+            /* A strong --color-accent-yellow for accents */
+            --color-accent-orange: #CD611E;
+            /* Keeping this for contrast if needed, but primary accent will be --color-accent-yellow */
+            --color-accent-light-yellow: #D2B48C;
+            /* A lighter --color-accent-yellow/tan for hover effects */
         }
 
         body {
-            font-family: 'Andika', 'Inter', sans-serif; /* Andika as primary, Inter as fallback, then generic sans-serif */
-            background-color: var(--color-white); /* Mostly white background */
-            color: var(--color-dark-grey); /* Main text color */
+            font-family: 'Andika', 'Inter', sans-serif;
+            /* Andika as primary, Inter as fallback, then generic sans-serif */
+            background-color: var(--color-white);
+            /* Mostly white background */
+            color: var(--color-dark-grey);
+            /* Main text color */
         }
+
         /* Apply Black Mango Regular to headings for branding */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Black Mango Regular', 'Andika', sans-serif;
-            color: var(--color-dark-grey); /* Dark grey for headings */
+            color: var(--color-dark-grey);
+            /* Dark grey for headings */
         }
+
         .fade-in-scroll {
             opacity: 0;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for both properties */
-            transform: translateY(20px); /* Starts slightly below its final position */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            /* Smooth transition for both properties */
+            transform: translateY(20px);
+            /* Starts slightly below its final position */
 
         }
+
         .fade-in-scroll.visible {
-            opacity: 1; /* Fully visible */
-            transform: translateY(0); /* Returns to original position */
+            opacity: 1;
+            /* Fully visible */
+            transform: translateY(0);
+            /* Returns to original position */
         }
 
         /* Custom scrollbar for better aesthetics */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #888;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
             border-radius: 10px;
@@ -100,15 +132,17 @@
     </style>
     <!-- Google Fonts - Inter for header typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-    <body>
-  
-      <!-- This is the new header section -->
-      <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
+</head>
+
+<body>
+
+    <!-- This is the new header section -->
+    <header class="absolute top-0 left-0 right-0 bg-transparent py-4 z-20">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <!-- Logo Placeholder: Replace src with your logo URL -->
-                <img src="assets/logos/Landing Logo.png" alt="Afrikive Logo" class="w-10 h-10 rounded-full object-cover border-0 border-white">
+                <img src="assets/logos/Landing Logo.png" alt="Afrikive Logo"
+                    class="w-10 h-10 rounded-full object-cover border-0 border-white">
                 <a href="#" class="text-2xl font-bold text-white">Afrikive</a>
             </div>
 
@@ -116,127 +150,193 @@
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex">
                 <ul class="flex space-x-6">
-                    <li><a href="#" class=" text-[var(--color-accent-home)] transition-colors duration-200 font-bold">Home</a></li>
-                    <li><a href="About.html" class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium">About</a></li>
-                    <li><a href="Contribute.html" class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium">Contribute</a></li>
-                    <li><a href="contact.html" class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium">Contact</a></li>
+                    <li><a href="#"
+                            class=" text-[var(--color-accent-home)] transition-colors duration-200 font-bold">Home</a>
+                    </li>
+                    <li><a href="About.html"
+                            class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium">About</a>
+                    </li>
+                    <li><a href="Contribute.html"
+                            class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium">Contribute</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium">Contact</a>
+                    </li>
                 </ul>
             </nav>
 
             <!-- Hamburger menu button for mobile -->
-            <button id="hamburger-button" class="md:hidden text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+            <button id="hamburger-button"
+                class="md:hidden text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
                 <span class="material-icons">menu</span>
             </button>
             <!-- END: Changes for Hamburger Menu -->
         </div>
-        
+
         <!-- BEGIN: Changes for Hamburger Menu -->
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 w-full bg-black bg-opacity-90 transition-all duration-300 ease-in-out py-4">
+        <div id="mobile-menu"
+            class="md:hidden hidden absolute top-16 left-0 w-full bg-black bg-opacity-90 transition-all duration-300 ease-in-out py-4">
             <ul class="flex flex-col items-center space-y-4">
-                <li><a href="#" class="text-[var(--color-accent-home)] transition-colors duration-200 font-bold text-lg">Home</a></li>
-                <li><a href="About.html" class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium text-lg">About</a></li>
-                <li><a href="Contribute.html" class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium text-lg">Contribute</a></li>
-                <li><a href="contact.html" class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium text-lg">Contact</a></li>
+                <li><a href="#"
+                        class="text-[var(--color-accent-home)] transition-colors duration-200 font-bold text-lg">Home</a>
+                </li>
+                <li><a href="About.html"
+                        class="text-white hover:text-[var(--color-accent-about)] transition-colors duration-200 font-medium text-lg">About</a>
+                </li>
+                <li><a href="Contribute.html"
+                        class="text-white hover:text-[var(--color-accent-contribute)] transition-colors duration-200 font-medium text-lg">Contribute</a>
+                </li>
+                <li><a href="contact.html"
+                        class="text-white hover:text-[var(--color-accent-contact)] transition-colors duration-200 font-medium text-lg">Contact</a>
+                </li>
             </ul>
         </div>
         <!-- END: Changes for Hamburger Menu -->
 
-      </header>
-      <!-- End of new header section -->
-      
-      <div data-w-id="7db77efd-4478-cb73-6e4a-f545dc64bd25" class="section hero">
+    </header>
+    <!-- End of new header section -->
+
+    <div data-w-id="7db77efd-4478-cb73-6e4a-f545dc64bd25" class="section hero">
         <div class="sticky-div">
-          <div data-poster-url="assets/backgrounds/Background image.png" data-video-urls="./Text Mask Video Scroll Animation_files/Background Video.mp4" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video w-background-video w-background-video-atom">
-            <video id="7db77efd-4478-cb73-6e4a-f545dc64bd27-video" autoplay="" loop="" style="background-image:url(&quot;assets/backgrounds/Background image.png&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-              <source src="assets/images/desert-removebg-preview.png" data-wf-ignore="true">
-              <source src="./Text Mask Video Scroll Animation_files/Background Video.mp4" media="(min-width:1200px)" data-wf-ignore="true">
-            </video>
-            
-            <!-- Hero Section -->
-            <div class="h-screen w-full flex items-start justify-center items-center">
-                <div class="fade-in-scroll">
-  
-                    <!-- Main Title -->
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight bold">
-                        Explore Africa's Vibrance
-                    </h1>
+            <div data-poster-url="assets/backgrounds/Background image.png"
+                data-video-urls="./Text Mask Video Scroll Animation_files/Background Video.mp4" data-autoplay="true"
+                data-loop="true" data-wf-ignore="true" class="video w-background-video w-background-video-atom">
+                <video id="7db77efd-4478-cb73-6e4a-f545dc64bd27-video" autoplay="" loop=""
+                    style="background-image:url(&quot;assets/backgrounds/Background image.png&quot;)" muted=""
+                    playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                    <source src="assets/images/desert-removebg-preview.png" data-wf-ignore="true">
+                    <source src="./Text Mask Video Scroll Animation_files/Background Video.mp4"
+                        media="(min-width:1200px)" data-wf-ignore="true">
+                </video>
+
+                <!-- Hero Section -->
+                <div class="h-screen w-full flex items-start justify-center items-center">
+                    <div class="fade-in-scroll">
+
+                        <!-- Main Title -->
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight bold">
+                            Explore Africa's Vibrance
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="after scroll">
+                <div class="new hero"></div>
+
+            </div>
+            <div class="content-wrap">
+                <div class="zoom" style="will-change: width, height; width: 60vw;">
+                    <div class="zoom-header">
+                    </div>
+                    <h1 class="heading">AFRIKIVE</h1>
+                    <img src="./Text Mask Video Scroll Animation_files/Mask Text.svg" loading="lazy" alt="" class="svg">
+                    <div class="zoom-header right">
+                    </div>
                 </div>
             </div>
         </div>
-          <div class="after scroll">
-            <div class="new hero"></div>
-            
-          </div>
-          <div class="content-wrap">
-            <div class="zoom" style="will-change: width, height; width: 60vw;">
-              <div class="zoom-header">
-              </div>
-              <h1 class="heading">AFRIKIVE</h1>
-              <img src="./Text Mask Video Scroll Animation_files/Mask Text.svg" loading="lazy" alt="" class="svg">
-              <div class="zoom-header right">
-              </div>
+    </div>
+
+    <!-- Featured Story Section -->
+    <section class="mb-20 mx-auto px-4 md:px-5 lg:px-5 py-16">
+        <div
+            class="bg-white p-10 rounded-xl shadow-lg mb-12 border-t-4 border-[var(--color-accent-home)] display:flex justify-content:center">
+            <!-- Enhanced styling -->
+            <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-6 text-center">WHAT IS AFRIKIVE?</h2>
+            <div class="text-lg text-[var(--color-medium-grey)] leading-relaxed text-center max-w-4xl mx-auto">
+                <p class="mb-4">
+                    Afrikive is a digital archive and blog dedicated to preserving and celebrating African stories,
+                    histories, and traditions. It goes beyond a typical blog by creating a space for authentic
+                    narratives from storytellers, historians, and artists. The platform's mission is to ensure that
+                    these stories, from ancient tales to modern-day experiences, are documented and cherished for future
+                    generations, thereby preserving a vital part of the continent's collective identity.
+                </p>
             </div>
-          </div>
         </div>
-      </div>
-          
-              <!-- Featured Story Section -->
-              <section class="mb-20 mx-auto px-4 md:px-5 lg:px-5 py-16">
-                <div class="bg-white p-10 rounded-xl shadow-lg mb-12 border-t-4 border-[var(--color-accent-home)] display:flex justify-content:center"> <!-- Enhanced styling -->
-                    <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-6 text-center">WHAT IS AFRIKIVE?</h2>
-                    <div class="text-lg text-[var(--color-medium-grey)] leading-relaxed text-center max-w-4xl mx-auto">
-                        <p class="mb-4">
-                            Afrikive is a digital archive and blog dedicated to preserving and celebrating African stories, histories, and traditions. It goes beyond a typical blog by creating a space for authentic narratives from storytellers, historians, and artists. The platform's mission is to ensure that these stories, from ancient tales to modern-day experiences, are documented and cherished for future generations, thereby preserving a vital part of the continent's collective identity.                        
-                        </p>
-                    </div>
-                </div>
-                    <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Featured Story</h2>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row border-b-4 border-[var(--color-accent-yellow)]">
-                        <!-- Left Column: Text Content -->
-                        <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                            <p class="text-sm font-semibold text-[var(--color-accent-yellow)] uppercase mb-2">Category: Historiography</p>
-                            <h3 class="text-4xl font-bold text-[var(--color-dark-grey)] mb-4 leading-tight">
-                                Heart Of Darkness
-                            </h3>
-                            <p class="text-lg text-[var(--color-dark-grey)] mb-6">
-                                A journey through memory, freedom, and the enduring spirit of a nation.
-                            </p>
-                            <p class="text-sm text-[var(--color-medium-grey)]">
-                                <span class="font-semibold text-[var(--color-accent-yellow)]">Read Time:</span> 7 Mins
-                            </p>
-                            <a href="blog/heart-of-darkness.html" class="mt-6 inline-block bg-[var(--color-accent-yellow)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-accent-yellow)] transition-colors duration-300 transform hover:scale-105">
-                                Read Full Story
-                            </a>
-                        </div>
-                        <!-- Right Column: Image/Visual -->
-                        <div class="lg:w-1/2 bg-white flex items-center justify-center">
-                            <img src="https://i.ibb.co/twKFX6NP/Image.jpg" alt="Featured Story Visual" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-              </section>
+        <h2 class="text-3xl font-bold text-[var(--color-dark-grey)] mb-8 text-center">Featured Stories</h2>
 
-            
-        </div> <!-- End of container for the rest of the content -->
+        <!-- Story 1: Heart of Darkness -->
+        <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row border-b-4 border-[var(--color-accent-yellow)] mb-12">
+            <!-- Left Column: Text Content -->
+            <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <p class="text-sm font-semibold text-[var(--color-accent-yellow)] uppercase mb-2">Category:
+                    Historiography</p>
+                <h3 class="text-4xl font-bold text-[var(--color-dark-grey)] mb-4 leading-tight">
+                    Heart Of Darkness
+                </h3>
+                <p class="text-lg text-[var(--color-dark-grey)] mb-6">
+                    A journey through memory, freedom, and the enduring spirit of a nation.
+                </p>
+                <p class="text-sm text-[var(--color-medium-grey)]">
+                    <span class="font-semibold text-[var(--color-accent-yellow)]">Read Time:</span> 7 Mins
+                </p>
+                <a href="blog/heart-of-darkness.html"
+                    class="mt-6 inline-block bg-[var(--color-accent-yellow)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-accent-yellow)] transition-colors duration-300 transform hover:scale-105">
+                    Read Full Story
+                </a>
+            </div>
+            <!-- Right Column: Image/Visual -->
+            <div class="lg:w-1/2 bg-white flex items-center justify-center">
+                <img src="https://i.ibb.co/twKFX6NP/Image.jpg" alt="Featured Story Visual"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
 
-      </div>
+        <!-- Story 2: John Allan Masese -->
+        <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row border-b-4 border-[var(--color-accent-yellow)]">
+            <!-- Left Column: Text Content -->
+            <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <p class="text-sm font-semibold text-[var(--color-accent-yellow)] uppercase mb-2">Category:
+                    Historiography</p>
+                <h3 class="text-4xl font-bold text-[var(--color-dark-grey)] mb-4 leading-tight">
+                    John Allan Masese: From Struggle To Freedom
+                </h3>
+                <p class="text-lg text-[var(--color-dark-grey)] mb-6">
+                    Before, During, and After Kenyan Independence; a journey through history.
+                </p>
+                <p class="text-sm text-[var(--color-medium-grey)]">
+                    <span class="font-semibold text-[var(--color-accent-yellow)]">Read Time:</span> 10 Mins
+                </p>
+                <a href="blog/john-allan-masese.html"
+                    class="mt-6 inline-block bg-[var(--color-accent-yellow)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--color-accent-yellow)] transition-colors duration-300 transform hover:scale-105">
+                    Read Full Story
+                </a>
+            </div>
+            <!-- Right Column: Image/Visual -->
+            <div class="lg:w-1/2 bg-white flex items-center justify-center">
+                <img src="assets/images/Newly elected Prime Minister Jomo Kenyatta alongside greeting crowds Prince William 1963.png"
+                    alt="John Allan Masese Story Visual" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+
+    </div> <!-- End of container for the rest of the content -->
+
+    </div>
 
     <!-- Footer Section -->
     <footer class="bg-white text-[var(--color-dark-grey)] py-8 mt-12 border-t border-[var(--color-accent-yellow)]">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Afrikive. All rights reserved.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
-                <a href="https://www.instagram.com/Afrik.ive" target="_blank" class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Instagram</a>
-                <a href="https://www.pinterest.com/afrikive/" class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Pinterest</a>
+                <a href="https://www.instagram.com/Afrik.ive" target="_blank"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Instagram</a>
+                <a href="https://www.pinterest.com/afrikive/"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">Pinterest</a>
                 <span class="text-[var(--color-dark-grey)]">For further inquiries, contact:</span>
-                <a href="mailto:contact@afrikive.org" class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">contact@afrikive.org</a>
+                <a href="mailto:contact@afrikive.org"
+                    class="text-[var(--color-dark-grey)] hover:text-[var(--color-accent-yellow)] transition-colors duration-200">contact@afrikive.org</a>
             </div>
         </div>
     </footer>
 
     <script>
         // JavaScript to make the hero text fade in on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const blogHeroText = document.getElementById('blog-hero-text-content');
             if (blogHeroText) {
                 // Remove opacity-0 after a short delay to allow CSS transition to work
@@ -250,21 +350,21 @@
 </body>
 
 
-    <script>
-      const zoomDiv = document.querySelector('.zoom');
-      const startWidth = 60;
-      const endWidth = 3750;
-      const fade = document.querySelector('.fade-in-scroll')
-      
-      window.addEventListener('scroll', () => {
+<script>
+    const zoomDiv = document.querySelector('.zoom');
+    const startWidth = 60;
+    const endWidth = 3750;
+    const fade = document.querySelector('.fade-in-scroll')
+
+    window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollFraction = scrollPosition / totalHeight;
-        
+
         const newWidth = startWidth + (endWidth - startWidth) * scrollFraction;
-        
+
         if (zoomDiv) {
-          zoomDiv.style.width = newWidth + 'vw';
+            zoomDiv.style.width = newWidth + 'vw';
         }
         if (fade) {
             fade.style.opacity = scrollFraction
@@ -274,66 +374,67 @@
         }
 
 
-      });
-        // A simple JavaScript function to highlight the active link based on the URL
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('#main-nav a');
-            const path = window.location.pathname;
+    });
+    // A simple JavaScript function to highlight the active link based on the URL
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('#main-nav a');
+        const path = window.location.pathname;
 
-            navLinks.forEach(link => {
-                // Here we're simulating which page is 'active' for demonstration.
-                // In a real application, you'd check the link's href against the current page URL.
-                // For example:
-                // if (link.href.includes(path)) {
-                //      link.classList.add('active-link');
-                // }
+        navLinks.forEach(link => {
+            // Here we're simulating which page is 'active' for demonstration.
+            // In a real application, you'd check the link's href against the current page URL.
+            // For example:
+            // if (link.href.includes(path)) {
+            //      link.classList.add('active-link');
+            // }
 
-                // For this example, let's just make 'Home' the active link.
-                if (link.textContent.toLowerCase() === 'home') {
-                    link.classList.add('active-link');
-                }
-            });
+            // For this example, let's just make 'Home' the active link.
+            if (link.textContent.toLowerCase() === 'home') {
+                link.classList.add('active-link');
+            }
         });
-      
-        // Get the hero title element by its ID.
-        const heroTitle = document.getElementById('hero-title');
+    });
 
-        // Define the scroll range for the fade-in effect.
-        // The effect will start at 3500vw and be fully visible at 3750vw.
-        const startScrollVw = 3500;
-        const endScrollVw = 3750;
+    // Get the hero title element by its ID.
+    const heroTitle = document.getElementById('hero-title');
 
-        // Add a scroll event listener to the window.
-        window.addEventListener('scroll', () => {
-            // Get the current scroll position in pixels.
-            const currentScrollY = window.scrollY;
-            // Get the viewport width in pixels to calculate the scroll threshold.
-            const viewportWidth = window.innerWidth;
+    // Define the scroll range for the fade-in effect.
+    // The effect will start at 3500vw and be fully visible at 3750vw.
+    const startScrollVw = 3500;
+    const endScrollVw = 3750;
 
-            // Calculate the pixel values for the start and end of the fade-in.
-            const startScrollPx = startScrollVw * viewportWidth;
-            const endScrollPx = endScrollVw * viewportWidth;
+    // Add a scroll event listener to the window.
+    window.addEventListener('scroll', () => {
+        // Get the current scroll position in pixels.
+        const currentScrollY = window.scrollY;
+        // Get the viewport width in pixels to calculate the scroll threshold.
+        const viewportWidth = window.innerWidth;
 
-            // Calculate the progress of the scroll within the defined range.
-            // This value will be between 0 (startScrollPx) and 1 (endScrollPx).
-            let scrollProgress = (currentScrollY - startScrollPx) / (endScrollPx - startScrollPx);
+        // Calculate the pixel values for the start and end of the fade-in.
+        const startScrollPx = startScrollVw * viewportWidth;
+        const endScrollPx = endScrollVw * viewportWidth;
 
-            // Clamp the progress value between 0 and 1.
-            // This ensures the opacity never goes below 0 or above 1.
-            scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+        // Calculate the progress of the scroll within the defined range.
+        // This value will be between 0 (startScrollPx) and 1 (endScrollPx).
+        let scrollProgress = (currentScrollY - startScrollPx) / (endScrollPx - startScrollPx);
 
-            // Set the opacity of the hero title based on the scroll progress.
-            heroTitle.style.opacity = scrollProgress;
-        });
+        // Clamp the progress value between 0 and 1.
+        // This ensures the opacity never goes below 0 or above 1.
+        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
 
-        // BEGIN: New JavaScript for Hamburger Menu
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // Set the opacity of the hero title based on the scroll progress.
+        heroTitle.style.opacity = scrollProgress;
+    });
 
-        hamburgerButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        // END: New JavaScript for Hamburger Menu
-    </script>
-  </body>
+    // BEGIN: New JavaScript for Hamburger Menu
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    // END: New JavaScript for Hamburger Menu
+</script>
+</body>
+
 </html>
